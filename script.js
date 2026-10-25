@@ -1216,9 +1216,7 @@ function projectPage(projectId) {
         </section>
     `;
 }
-
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");e.target.querySelectorAll("[data-w]").forEach(b=>b.style.width=b.dataset.w+"%")}}),{threshold:.15});
-
 function route() {
     cancelAnimationFrame(raf);
 
@@ -1313,18 +1311,12 @@ function navigateToSection(id) {
 
     setTimeout(goToSection, 300);
 }
-
-
 document.querySelectorAll(".nav-links [data-scroll]")
     .forEach(button => {
         button.addEventListener("click", () => {
             navigateToSection(button.dataset.scroll);
         });
     });
-
-
-/* ===== BU5 MISSION SIMULATOR ===== */
-
 const missionData = {
     web: {
         title: "MISSION WEB INITIALISÉE",
